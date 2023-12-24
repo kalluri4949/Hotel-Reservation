@@ -13,7 +13,7 @@
       <th>Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="reservations.length; else noReservation">
     <tr *ngFor="let reservation of reservations">
       <td>{{ reservation.guestName }}</td>
       <td>{{ reservation.guestEmail }}</td>
